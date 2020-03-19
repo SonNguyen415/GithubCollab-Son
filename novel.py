@@ -34,8 +34,7 @@ def insert_novels(nName, nGenre, nID, aID):
     """
     insertion = ('INSERT INTO Novels (Name, Genre, NovelID, AuthorID) Values ("' + str(nName) + '", "' + str(nGenre) + '", ' + str(nID) + ', ' + str(aID) + ')');
     sql = c.execute(insertion)
-    # I don't wanna save
-
+    con.commit() # You wanna save
 
 def render_menu():
     """
